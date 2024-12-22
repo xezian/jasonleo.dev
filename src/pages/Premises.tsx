@@ -8,7 +8,9 @@ export const Premises: FC = () => {
     <>
       <HeadManager title="Jason Leo - Premises" favicon={book} />
       <div className="p-2 w-full h-full flex flex-wrap gap-2 bg-black rounded-md">
-        <div className="w-full h-full rounded-md border bg-gray-200"></div>
+        <div className="w-full h-full rounded-md border bg-gray-200">
+          We have to think about this
+        </div>
       </div>
     </>
   );

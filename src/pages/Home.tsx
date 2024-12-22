@@ -1,11 +1,12 @@
 import { FC } from "react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { Outlet } from "react-router";
 import waves from "../assets/svg/waves.svg";
 import book from "../assets/svg/book-image.svg";
 import HeadManager from "../components/HeadManager";
 
 export const Home: FC = () => {
+  const location = useLocation();
   return (
     <>
       <HeadManager title="Jason Leo Dot Com" favicon={waves} />
@@ -20,6 +21,11 @@ export const Home: FC = () => {
             </Link>
           </div>
           <Outlet />
+          {location.pathname === "/" ? (
+            <div className="h-full w-full grid place-items-center">
+              Somewhere we know already is
+            </div>
+          ) : null}
         </div>
       </div>
     </>
