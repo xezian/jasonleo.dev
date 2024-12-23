@@ -6,7 +6,7 @@ import { Home, Premises } from "./pages";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="jasonleo.dev">
       <Routes>
         <Route path="/" element={<Home />}>
           <Route path="premises" element={<Premises />} />
