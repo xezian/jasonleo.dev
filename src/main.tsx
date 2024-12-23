@@ -9,6 +9,7 @@ createRoot(document.getElementById("root")!).render(
     <BrowserRouter basename="jasonleo.dev">
       <Routes>
         <Route path="/" element={<Home />}>
+          <Route path="/" element={<div>Home</div>} />
           <Route path="premises" element={<Premises />} />
         </Route>
       </Routes>
