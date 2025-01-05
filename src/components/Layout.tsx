@@ -47,12 +47,15 @@ const MenuExpanded = () => {
   useEffect(() => {
     if (isPresent) {
       const enterAnimation = () => {
-        animate(scope.current, { width: "fit-content", height: "100%" });
+        animate(scope.current, {
+          width: ["0px", "fit-content"],
+          opacity: [0, 1],
+        });
       };
       enterAnimation();
     } else {
       const exitAnimation = async () => {
-        await animate(scope.current, { width: "0px", height: "100%" });
+        await animate(scope.current, { width: "0px", opacity: 0 });
         safeToRemove();
       };
 
@@ -62,8 +65,8 @@ const MenuExpanded = () => {
 
   return (
     <div ref={scope} className="w-0">
-      <Link className="overflow-visible" to="/premises">
-        <img src={book} alt="Book" />
+      <Link to="/premises">
+        <img src={book} alt="Book" className="object-none h-full" />
       </Link>
     </div>
   );
