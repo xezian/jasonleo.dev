@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { Outlet } from "react-router";
 import waves from "../assets/svg/waves.svg";
 import book from "../assets/svg/book-image.svg";
+import cone from "../assets/svg/cone.svg";
 import { AnimatePresence, useAnimate, usePresence } from "motion/react";
 
 export const Layout: FC = () => {
@@ -40,7 +41,7 @@ export const Layout: FC = () => {
   );
 };
 
-const MenuExpanded = () => {
+const MenuExpanded: FC = () => {
   const [isPresent, safeToRemove] = usePresence();
   const [scope, animate] = useAnimate();
 
@@ -64,9 +65,12 @@ const MenuExpanded = () => {
   });
 
   return (
-    <div ref={scope} className="w-0">
+    <div ref={scope} className="w-0 flex">
       <Link to="/premises">
         <img src={book} alt="Book" className="object-none h-full" />
+      </Link>
+      <Link to="/observations">
+        <img src={cone} alt="Cone" className="object-none h-full" />
       </Link>
     </div>
   );
