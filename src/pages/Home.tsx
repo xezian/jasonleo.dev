@@ -8,8 +8,8 @@ export const Home: FC = () => {
     <>
       <HeadManager title="Jason Leo - Home" favicon={waves} />
       <div className="p-1 h-full w-full flex flex-wrap gap-2 bg-black rounded-md">
-        <div className="rounded-md border grow bg-cyan-200 grid place-items-center">
-          <img src={waves} alt="waves icon" />
+        <div className="rounded-md border bg-cyan-200 flex w-full flex-col justify-end items-center">
+          <img src={waves} alt="waves icon" className="mb-[50vh]" />
         </div>
       </div>
     </>

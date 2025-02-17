@@ -14,7 +14,7 @@ export const Layout: FC = () => {
   useEffect(() => {
     timeoutRef.current = setTimeout(
       () => setInnerMenuHovered(menuHovered),
-      300
+      500
     );
     return () => {
       clearTimeout(timeoutRef.current);
@@ -30,7 +30,7 @@ export const Layout: FC = () => {
 
   return (
     <>
-      <div className="flex absolute top-[13px] left-[14px]">
+      <div className="flex absolute z-1 top-[13px] left-[14px]">
         {innerMenuHovered ? null : (
           <img
             src={waves}
@@ -85,7 +85,7 @@ const MenuOpened: FC<{
   return (
     <div
       ref={menuScope}
-      className="flex w-100 p-1 mb-2 rounded-md border bg-white h-0"
+      className="flex w-fit p-1 mb-2 rounded-md border bg-white h-0"
     >
       <Link to="/">
         <img src={waves} alt="Waves" />

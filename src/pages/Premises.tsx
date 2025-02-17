@@ -8,8 +8,8 @@ export const Premises: FC = () => {
     <>
       <HeadManager title="Jason Leo - Premises" favicon={book} />
       <div className="p-1 h-full w-full flex flex-wrap gap-2 bg-black rounded-md">
-        <div className="rounded-md border grow bg-emerald-200 grid place-items-center">
-          <img src={book} alt="book icon" />
+        <div className="rounded-md border bg-emerald-200 flex w-full flex-col justify-end items-center">
+          <img src={book} alt="book icon" className="mb-[50vh]" />
         </div>
       </div>
     </>
